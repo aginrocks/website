@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 
 import './globals.css';
 
-import { fontSans } from '@/lib/fonts';
+import { inter, jetbrainsMono, leagueSpartan } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 
@@ -26,7 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn('min-h-screen font-sans antialiased', fontSans.variable)}
+        className={cn(
+          'min-h-screen font-sans antialiased',
+          inter.variable,
+          jetbrainsMono.variable,
+          leagueSpartan.variable
+        )}
       >
         <ThemeProvider
           attribute="class"
